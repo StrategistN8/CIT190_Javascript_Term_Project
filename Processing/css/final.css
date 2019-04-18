@@ -1,0 +1,249 @@
+/* Screen Settings */
+
+* {
+    box-sizing:border-box;
+}
+
+@media only screen and (min-width: 600px) {
+        .col-m-1 {width: 8.33%;}
+        .col-m-2 {width: 16.66%;}
+        .col-m-3 {width: 25%;}
+        .col-m-4 {width: 33.33%;}
+        .col-m-5 {width: 41.66%;}
+        .col-m-6 {width: 50%;}
+        .col-m-7 {width: 58.33%;}
+        .col-m-8 {width: 66.66%;}
+        .col-m-9 {width: 75%;}
+        .col-m-10 {width: 83.33%;}
+        .col-m-11 {width: 91.66%;}
+        .col-m-12 {width: 100%;}
+    }
+@media only screen and (min-width: 768px) {
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        body{ 
+            max-width:1200px;
+            background-image: url("../media/rocks.jpg");
+            background-attachment: fixed;
+            background-repeat:no-repeat;
+            background-size:cover;
+            
+        }
+    }
+
+    /* Fonts */
+
+@font-face{   
+    font-family:Industrial;
+    src:url("../fonts/BABIND.TTF");
+}
+
+@font-face{
+    font-family:Orbitron;
+    src:url("../fonts/orbitron-medium.otf");
+}
+
+/* Navigation */ 
+
+nav {
+    margin-left:25%;
+    margin-right:10%;
+    margin-top:0%;
+    font-size: 0.5em;
+    letter-spacing: 1em;
+    display:inline-table;
+    
+}	
+
+nav ul li {
+    display:inline-table;
+    margin-left:5%;
+    font-family: Orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav ul li:hover {
+    border-radius: 8px;
+    
+}
+nav ul li a {
+    display: block; 
+    padding: 5px 10px;
+    text-decoration: none;
+    transition-duration: 2s;
+    
+}
+nav ul li:hover a {
+    color:white; 
+    text-decoration: none;
+    transition-duration: 2s;
+}
+nav ul li:hover > ul {
+    display:flex;
+    flex-direction:column;
+    transition-duration: 2s;
+}
+nav ul ul {
+    display: none;
+    background: radial-gradient(dimgray, black);
+    border-radius: 3px; 
+    padding: 0px;
+    position: absolute; 
+    z-index:10; 
+   
+}
+nav ul ul li {
+    display:block;
+    position: relative;
+    text-align:left;
+}
+nav ul ul li a {
+    padding: 15px 40px;
+    color: #757575;
+} 
+nav ul ul li a:hover {
+    background-color:black;
+    color:whitesmoke;
+    transition-duration: 2s;
+}
+
+a:link{
+    color:yellow;
+    text-decoration:none;
+}
+a:hover{
+    color: lemonchiffon;
+    text-decoration:underline;
+}
+a:active{
+    color:gray;
+    text-decoration:none;
+}
+a:visited{
+    color:yellow;
+    text-decoration:none;
+}
+
+
+
+/* Rest of Styling */
+
+canvas{
+    border: yellow 5px solid;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#screenshot{
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
+#gameInfo{
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+body{
+    background-image: url("../media/rocks.jpg");
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    
+    margin:5%;
+    font-family: Industrial, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    size:2em;
+    color:whitesmoke;
+    text-shadow:1px 1px black;
+ 
+}
+section{
+    background-color: rgba(105, 105, 105, 0.486);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction:row;
+    font-family: Orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+div{
+    flex: 1;
+}
+#gamescreenshot{
+    size: 45%;
+    width: auto;
+    height:auto;
+    border: 2px groove yellow;
+    box-shadow: 2px 2px darkslategrey;
+    background: radial-gradient(whitesmoke,lemonchiffon,black, black, black);
+}
+h1{
+    color:whitesmoke;
+    font-size: 4em;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    /*margin-left:10%;*/
+   
+       
+}
+h2{
+    color:whitesmoke;
+    text-shadow: 1px 1px black;
+    background-image: url("../media/caution.jpg");
+    background-repeat:no-repeat;
+    padding-left:10px;
+    border-radius:10px;
+    
+}
+hr{
+    border: 1px solid yellow;
+    
+}
+p{
+    background-color: rgba(105, 105, 105, 0.486);
+}
+button{
+    background-image: url("../media/caution.jpg");
+    background-repeat:no-repeat;
+    color:yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px black;
+    border: gray 3px solid;
+}
+
+button:hover{
+    color:lemonchiffon;
+}
+footer {color:black;
+    background-image: url("../media/caution.jpg");
+    background-repeat:repeat;
+    text-align:center; 
+    letter-spacing:5px;
+    font-family: orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:whitesmoke;
+    width:100%;
+    margin-left:0%;
+    margin-top:15%;
+    border-radius: 15px;
+}  
+.icons{
+    background-color:black;
+}
+.icons a{
+    display:inline;
+    text-align:center;
+    padding:12px,0;
+    transition: all 01s ease;
+    color:snow;
+}
+.icons a:hover{
+  color:lemonchiffon;
+  background-color:black;
+}
+  
+  
