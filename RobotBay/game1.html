@@ -8,36 +8,9 @@
     <meta name="description" content="Website created for CIT190 final project." />
     <meta name="keywords" content="games, assignment, CIT190, NMC, northwestern michigan collage" />
     <link rel="stylesheet" href="css/final.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <style>
-    
-    *,
-    *::before,
-    *::after{
-        box-sizing: border-box;
-    }
-
-    .grid{
-        max-width: 960px;
-        margin:auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    
-    .tile {
-        margin: 5px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 150px;
-        width: 150px;
-    }
-    
-    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">    
     
 </head>
-
 <body>
 <header id="navigation" class="col-12 col-m-12">
     
@@ -59,8 +32,8 @@
 </header>
 <h2>Robot Bay</h2>
 <hr/>
-<section class="col-12 col-m-12">
-    <div id="gamespace"></div>
+<section class="col-12 col-m-12" style="height: 100px;">
+    <button id="launchButton" style="margin-left:auto; margin-right:auto; margin-top: 3%; padding: 1px; height:30%;">Click here to launch the game window.</button>
 </section>
 <hr/>
 <footer class="col-12 col-m-12">
@@ -71,6 +44,10 @@
         </div>
     <small>&copy; Jim Lyons 2019-2020. Last Updated April 2019</small>
 </footer>
-<script src="js/RobotBay.js"></script>
+<script>
+// Creating a window object to launch the game:
+document.getElementById("launchButton").addEventListener("click", function openWin() {
+    myWindow = window.open("../FinalProject/RobotBayArea.html", "myWindow", "width=1200, height=900");  
+});</script>
 </body>
 </html>

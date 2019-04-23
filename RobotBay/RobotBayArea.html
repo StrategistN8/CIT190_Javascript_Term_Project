@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robot Bay</title>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website created for CIT190 final project." />
+    <meta name="keywords" content="games, assignment, CIT190, NMC, northwestern michigan collage" />
+    <link rel="stylesheet" href="css/final.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+    body{
+        background-image: url("media/industrial_background.jpg");
+        background-size:cover;
+        background-attachment: fixed;
+        display:flex;
+        justify-content:space-between;
+    }
+    #scanBot{
+        height: 50px;
+        width: auto;
+    }
+    #digBot{
+        height: 120px;
+        width: auto;    
+    }
+    #clawBot{
+        height: 120px;
+        width: auto;
+    }
+    #copBot{
+        height: 120px;
+        width: auto;
+    }
+    #beamBot{
+        height: 120px;
+        width: auto;
+    }
+    #liftBot{
+        height: 120px;
+        width: auto;
+        
+    }
+    #prop1 #prop2 #prop3{
+        height:100px;
+        width:100px;
+
+    }
+    button{
+        background: radial-gradient(lemonchiffon, yellow);
+        color: white;
+        border: white 2px solid;
+        border-radius: 15px;
+
+    }
+</style>
+</head>
+<header id="controls">
+           <ul>
+                <li><a href="#tab1" id="background">Backgrounds</a></li>
+                <li><a href="#tab2" id="robots">Robots</a></li>
+            </ul>
+           <div class="tabDiv" id="tab1">
+            <button id="changeBackgroundRocks">Click for Asteriod Background</button><br/>
+            <button id="changeBackgroundCavern">Click for Cavern Background</button><br/>
+            <button id="changeBackgroundIndust">Click for Industrial Background</button><br/>
+            <button id="changeBackgroundPlanet">Click for Planet Background</button><br/>
+            </div>   
+            <div class="tabDiv" id="tab2">    
+            <button id="addScanBot">MX-S2 Scan Bot</button><br/>
+            <button id="addDigBot">MX-56E Excavation Bot</button><br/>
+            <button id="addClawBot">MX-56C Scrap Bot</button><br/>
+            <button id="addCopBot">NX-56 Security Bot</button><br/>
+            <button id="addLiftBot">MX-342L Lifter Bot</button><br/>
+            <button id="addBeamBot">MX-64 Energy Drilling Bot</button><br/>
+            </div>
+</header>
+<body class="col-12 col-m-12">
+<img id="scanBot" src="media/MX-S4.png">
+<img id="digBot" src="media/MX-56E.png">
+<img id="beamBot" src="media/MX-64.png">
+<img id="liftBot"src="media/MX-342L.png">
+<img id="copBot" src="media/NX-56.png">
+<img id="clawBot" src="media/MX-56C.png">
+<!-- <div id="prop1"></div>
+<div id="prop2"></div>
+<div id="prop3"></div> -->
+</body>
+</html>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $(document).ready(function()
+    {
+        $("#tab1").toggle(2000);
+        $("#tab2").toggle(2000);
+        $("img").toggle(2000);
+    
+
+        $("#robots").click(function(){
+            $("#tab2").toggle(2000);
+        });
+        $("#background").click(function(){
+            $("#tab1").toggle(2000);
+        });
+
+        $("#changeBackgroundRocks").click(function()
+        {
+            $("body").css('background-image', 'url("media/rocks.jpg")');
+            $("#prop1").css('background-image', 'url("media/bolder.png")');
+            $("#prop3").css('background-image', 'url("media/bolder.png")');
+            $("#prop3").css('background-image', 'url("media/bolder.png")');
+        });
+        $("#changeBackgroundCavern").click(function()
+        {
+            $("body").css('background-image', 'url("media/Light_Into_The_Cavern_Free_Vector/LightIntoTheCavernFreeVector.jpg")');
+        });
+        $("#changeBackgroundIndust").click(function()
+        {
+            $("body").css('background-image', 'url("media/industrial_background.jpg")');
+        });
+        $("#changeBackgroundPlanet").click(function()
+        {
+            $("body").css('background-image', 'url("media/space.jpg")');
+        });
+     
+
+        $("#addScanBot").click(function(){
+            $("#scanBot").toggle(1000);
+        });
+        $("#addDigBot").click(function(){
+            $("#digBot").toggle(1000);
+        });
+        $("#addClawBot").click(function(){
+            $("#clawBot").toggle(1000);
+        });
+        $("#addCopBot").click(function(){
+            $("#copBot").toggle(1000);
+        });
+        $("#addBeamBot").click(function(){
+            $("#beamBot").toggle(1000);
+        });
+        $("#addLiftBot").click(function(){
+            $("#liftBot").toggle(1000);
+        });
+
+        $("img").draggable();
+        $("#controls").draggable();
+    });
+</script>
